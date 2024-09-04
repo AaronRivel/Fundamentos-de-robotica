@@ -218,7 +218,7 @@ I = np.array([[(m/12)*(b**2+c**2),0,0],
               [0,0,(m/12)*(a**2+b**2)]])
 
 e_anterior = 0
-q0 = np.array([0,1,1])
+q0 = np.array([0,0,np.pi/4])
 tf=10
 h=0.05
 J = np.zeros((6,len(q0)))

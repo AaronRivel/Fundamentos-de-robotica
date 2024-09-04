@@ -90,15 +90,15 @@ def inicio(x,y):
     h = 0.1
 
     compensation_velocity = False
-    kp = 0.1
+    kp = 5
     t1,Q1=rk4(f,Q0,len(x)-1,h,kp,compensation_velocity)
 
     compensation_velocity = True
-    kp = 0.1
+    kp = 5
     t2,Q2=rk4(f,Q0,len(x)-1,h,kp,compensation_velocity)
 
-    compensation_velocity = False
-    kp = 10
+    compensation_velocity = True
+    kp = 5
     t3,Q3=rk4(f,Q0,len(x)-1,h,kp,compensation_velocity)
 
     fig=plt.figure()
@@ -118,7 +118,7 @@ def inicio(x,y):
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     
-    ani = animation2.FuncAnimation(fig=fig, func=animation, frames=len(tt), interval=1000*h)
+    ani = animation2.FuncAnimation(fig=fig, func=animation, frames=len(tt), interval=100*h)
     plt.show()
 
 x=[0.203, 0.109, 0.111, 0.201, 0.211, 0.326, 0.256, 0.328, 0.357, 0.361, 0.436, 0.404, 0.486, 0.488, 0.551, 0.607, 0.656, 0.598, 0.66, 0.719, 0.713, 0.779, 0.789, 0.852]

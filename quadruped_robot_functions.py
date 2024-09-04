@@ -105,9 +105,9 @@ def main(plot,matrix,frame_update):
 
         T_aux = T_array[frames-1]
 
-        print('theta_p = ',q[0]-360,' theta_f = ',q[1]-360)
-        print('a = ',T_aux[0][3]-20,' b = ',T_aux[1][3]-20)
-        print('x = ',T_aux[0][3],' y = ',T_aux[1][3])
+        #print('theta_p = ',q[0]-360,' theta_f = ',q[1]-360)
+        #print('a = ',T_aux[0][3]-20,' b = ',T_aux[1][3]-20)
+        #print('x = ',T_aux[0][3],' y = ',T_aux[1][3])
 
         update_frames(T_array,handel_xaxis,handel_yaxis,handel_zaxis,handel_vectors,frames,scale)
         

@@ -128,9 +128,9 @@ def main(plot,matrix,frame_update,gate):
         if(round(frame) == len(walk)-1 and flag == False):
             flag = True
             print('______________________________________________________________________________________')
-            print('Theta P = ',theta_p_array)
+            print('theta_p = ',theta_p_array)
             print('----------------------')
-            print('Theta F = ',theta_f_array)
+            print('theta_f = ',theta_f_array)
             print('______________________________________________________________________________________')
         
     #---------------------------------------------------------------------------------------------------------------
@@ -147,11 +147,11 @@ def main(plot,matrix,frame_update,gate):
     ax.plot3D([0,0],[0,1],[0,0],'g')
     ax.plot3D([0,0],[0,0],[0,1],'b')
 
-    path_size = 20
+    path_size = 10
 
     Q0 = [20,5]
-    ar = 10
-    br = 5
+    ar = 5
+    br = 2
     x = np.linspace(Q0[0]+ar,Q0[0]-ar,path_size)
     elipse = gate(Q0,x,ar,br)
     line = np.linspace(Q0[0]-ar,Q0[0]+ar,path_size)
